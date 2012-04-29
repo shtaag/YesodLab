@@ -1,0 +1,24 @@
+Default: &defaults
+  user: YesodLab
+  password: YesodLab
+  host: localhost
+  port: 27017
+  database: YesodLab
+  poolsize: 10
+
+Development:
+  <<: *defaults
+
+Testing:
+  database: YesodLab_test
+  <<: *defaults
+
+Staging:
+  database: YesodLab_staging
+  poolsize: 100
+  <<: *defaults
+
+Production:
+  database: YesodLab_production
+  poolsize: 100
+  <<: *defaults
